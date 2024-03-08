@@ -1,4 +1,9 @@
-﻿using System.Text;
+﻿using Engine.ViewModels;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -9,15 +14,22 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace CC31B_GroupMaki;
-
-/// <summary>
-/// Interaction logic for MainWindow.xaml
-/// </summary>
-public partial class MainWindow : Window
+namespace CC31B_TeamMaki
 {
-    public MainWindow()
+    /// <summary>
+    /// Interaction logic for MainWindow.xaml
+    /// </summary>
+    public partial class MainWindow : Window
     {
-        InitializeComponent();
+        private GameSession _gameSession;
+
+        public MainWindow()
+        {
+            InitializeComponent(); 
+            _gameSession = new GameSession();
+            DataContext = _gameSession;
+        }
+
+        
     }
 }
