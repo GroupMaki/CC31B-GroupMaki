@@ -19,6 +19,7 @@ namespace CC31B_TeamMaki
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+    /// A new comment
     public partial class MainWindow : Window
     {
         private GameSession _gameSession;
